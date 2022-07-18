@@ -1,3 +1,4 @@
+{% if values.enableDynamoDB %}
 resource "aws_dynamodb_table" "basic-dynamodb-table"{
 
   name        = "my-dynamo-table"
@@ -19,3 +20,5 @@ resource "aws_dynamodb_table" "basic-dynamodb-table"{
   ]
 
 }
+
+{% endif %}

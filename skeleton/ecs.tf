@@ -1,4 +1,4 @@
-{% if values.enableDynamoDB %}
+
 
 resource "aws_ecs_task_definition" "taskUsingTemplate" {
   family                = "${local.app_name}-task"
@@ -9,8 +9,7 @@ resource "aws_ecs_task_definition" "taskUsingTemplate" {
   container_definitions = jsonencode([
     {
       name      = "ecs"
-      image = ${{ values.imageURL }}
-      //image     = var.imageURL
+      image     = "${{ values.imageURL }}"
       essential = true
       portMappings = [
         {
@@ -22,4 +21,3 @@ resource "aws_ecs_task_definition" "taskUsingTemplate" {
   ])
 }
 
-{% endif %}

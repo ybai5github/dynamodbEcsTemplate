@@ -17,6 +17,24 @@ resource "aws_ecs_task_definition" "taskUsingTemplate" {
           hostPort      = ${{ values.portToMap | int }}
         }
       ]
+
+      environment = [
+        {% if values.enableDynamoDB %}
+        {
+        name = "DYNAMODB_ARN"
+        value = aws_dynamodb_table.basic-dynamodb-table.arn
+        },
+        {% endif %}
+
+        {% if values.dogName != "" %}
+        {
+          name = "THE_DOG_NAME"
+          value = "${{ values.dogName }}"
+        }
+        {% endif %}
+      ]
+
+
     }
   ])
 }

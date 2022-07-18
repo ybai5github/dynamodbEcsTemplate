@@ -17,6 +17,11 @@ spec:
         - owner
       properties:
 
+        dogName:
+          title: Dog Name
+          type: string
+          default: ""
+
         portToMap:
           title: Port number
           type: string
@@ -68,6 +73,7 @@ spec:
         copyWithoutRender:
           - .github/workflows/*
         values:
+          dogName: ${{ parameters.dogName }}
           portToMap: ${{ parameters.portToMap }}
           imageURL: ${{ parameters.imageURL }}
           enableDynamoDB: ${{ parameters.enableDynamoDB }}

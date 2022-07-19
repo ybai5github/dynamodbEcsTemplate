@@ -26,10 +26,10 @@ resource "aws_ecs_task_definition" "taskUsingTemplate" {
         },
         {% endif %}
 
-        {% if values.dogName != "" %}
+        {% if values.serviceName != "" %}
         {
-          name = "THE_DOG_NAME"
-          value = "${{ values.dogName }}"
+          name = "THE_SERVICE_NAME"
+          value = "${{ values.serviceName }}"
         }
         {% endif %}
       ]

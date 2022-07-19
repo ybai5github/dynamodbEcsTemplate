@@ -17,8 +17,8 @@ spec:
         - owner
       properties:
 
-        dogName:
-          title: Dog Name
+        serviceName:
+          title: Service Name
           type: string
           default: ""
 
@@ -73,7 +73,7 @@ spec:
         copyWithoutRender:
           - .github/workflows/*
         values:
-          dogName: ${{ parameters.dogName }}
+          serviceName: ${{ parameters.serviceName }}
           portToMap: ${{ parameters.portToMap }}
           imageURL: ${{ parameters.imageURL }}
           enableDynamoDB: ${{ parameters.enableDynamoDB }}

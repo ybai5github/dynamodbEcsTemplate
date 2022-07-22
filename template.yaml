@@ -7,8 +7,9 @@ metadata:
   tags:
     - ecs
     - dynamodb
+    - version 1.0
 spec:
-  tags: 123
+
   owner: ybai5
   type: service
   parameters:
@@ -78,6 +79,7 @@ spec:
           portToMap: ${{ parameters.portToMap }}
           imageURL: ${{ parameters.imageURL }}
           enableDynamoDB: ${{ parameters.enableDynamoDB }}
+
 
           component_id: ${{ parameters.component_id }}
           description: ${{ parameters.description }}

@@ -79,7 +79,7 @@ spec:
           portToMap: ${{ parameters.portToMap }}
           imageURL: ${{ parameters.imageURL }}
           enableDynamoDB: ${{ parameters.enableDynamoDB }}
-          templateVersion: ${{ metadata.tags }}
+          templateVersion: ${{ metadata.name }}
 
           component_id: ${{ parameters.component_id }}
           description: ${{ parameters.description }}

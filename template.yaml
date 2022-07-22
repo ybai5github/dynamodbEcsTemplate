@@ -9,7 +9,6 @@ metadata:
     - dynamodb
     - version1
 spec:
-
   owner: ybai5
   type: service
   parameters:

@@ -8,6 +8,7 @@ metadata:
     - ecs
     - dynamodb
 spec:
+  tags: 123
   owner: ybai5
   type: service
   parameters:

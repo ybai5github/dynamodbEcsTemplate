@@ -7,7 +7,7 @@ metadata:
   tags:
     - ecs
     - dynamodb
-    - version1
+    - 1
 spec:
 
   owner: ybai5

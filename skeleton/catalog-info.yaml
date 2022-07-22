@@ -8,7 +8,7 @@ metadata:
 
   {% set items = ${{values.templateVersion}} %}
   {% for each in items %}
-  tags: {{each}}
+  tags: <li>{{ each }}</li>
   {% endfor %}
   annotations:
     github.com/project-slug: ${{values.destination.owner + "/" + values.destination.repo}}

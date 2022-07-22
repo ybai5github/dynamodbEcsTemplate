@@ -7,6 +7,7 @@ metadata:
   {%- endif %}
 
   {% set items = ${{values.templateVersion}} %}
+  {% endset %}
   {% for each in items %}
   tags: <li>{{ each }}</li>
   {% endfor %}

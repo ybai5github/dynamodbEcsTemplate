@@ -5,7 +5,7 @@ metadata:
   title: Create ECS and Dynamodb Template
   description: Create a new project that has ecs and dynamodb
   tags:
-
+    - ecs
     - dynamodb
     - version1
 spec:

@@ -5,8 +5,8 @@ metadata:
   {%- if values.description %}
   description: ${{values.description | dump}}
   {%- endif %}
-  tags:
-    - ${{metadata.tags}}
+#  tags:
+#    - ${{metadata.tags}}
   annotations:
     github.com/project-slug: ${{values.destination.owner + "/" + values.destination.repo}}
     backstage.io/techdocs-ref: dir:.

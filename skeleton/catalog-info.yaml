@@ -5,8 +5,10 @@ metadata:
   {%- if values.description %}
   description: ${{values.description}}
   {%- endif %}
-
-  tags: ${{values.templateVersion}}
+  var items = ${{values.templateVersion}}
+  {% for each in items %}
+  tags: {{each}}
+  {% endfor %}
   annotations:
     github.com/project-slug: ${{values.destination.owner + "/" + values.destination.repo}}
     backstage.io/techdocs-ref: dir:.

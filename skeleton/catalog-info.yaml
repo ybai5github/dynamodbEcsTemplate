@@ -5,7 +5,8 @@ metadata:
   {%- if values.description %}
   description: ${{values.description}}
   {%- endif %}
-  var items = ${{values.templateVersion}}
+
+  {% set items = ${{values.templateVersion}} %}
   {% for each in items %}
   tags: {{each}}
   {% endfor %}
